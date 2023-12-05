@@ -27,10 +27,6 @@ public class Pokemon {
 	public boolean estKO() {
 		return pv <= 0;
 	}
-
-	protected void blessePar(Pokemon autrePokemon) {
-		infligerDegats(autrePokemon.atk);
-	}
 	
 	protected void infligerDegats(int degats) {
 		pv -= degats;
@@ -39,7 +35,7 @@ public class Pokemon {
 	}
 
 	public void attaquer(Pokemon autrePokemon) {
-		autrePokemon.blessePar(this);
+		autrePokemon.infligerDegats(this.atk);
 	}
 
 	@Override

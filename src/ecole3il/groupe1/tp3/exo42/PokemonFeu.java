@@ -6,11 +6,11 @@ public class PokemonFeu extends Pokemon {
 		super(nom, pv, atk);
 	}
 	
-	protected void blessePar(PokemonPlante autrePokemon){
-		super.infligerDegats((int) (autrePokemon.getAtk() * 0.5));
+	public void attaquer(PokemonPlante autrePokemon){
+		autrePokemon.infligerDegats((int) (getAtk() * 2));
 	}
 
-	protected void blessePar(PokemonEau autrePokemon){
-		super.infligerDegats((int) (autrePokemon.getAtk() * 2));
+	public void attaquer(PokemonEau autrePokemon){
+		autrePokemon.infligerDegats((int) (getAtk() / 2));
 	}
 }

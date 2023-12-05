@@ -8,11 +8,12 @@ public class PokemonEau extends Pokemon {
 	}
 
 
-	protected void blessePar(PokemonPlante autrePokemon){
-		super.infligerDegats((int) (autrePokemon.getAtk() * 2));
+	public void attaquer(PokemonPlante autrePokemon){
+		autrePokemon.infligerDegats(getAtk() / 2);
 	}
 
-	protected void blessePar(PokemonFeu autrePokemon){
-		super.infligerDegats((int) (autrePokemon.getAtk() * 0.5));
+
+	public void attaquer(PokemonEau autrePokemon){
+		autrePokemon.infligerDegats(getAtk() * 2);
 	}
 }
