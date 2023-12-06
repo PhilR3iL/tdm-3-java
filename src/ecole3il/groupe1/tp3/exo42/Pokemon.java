@@ -4,14 +4,12 @@ public class Pokemon {
 	private String nom;
 	private int pv;
 	private int atk;
-	private TypePokemon type;
 
-	public Pokemon(String nom, int pv, int atk, TypePokemon type) {
+	public Pokemon(String nom, int pv, int atk) {
 		super();
 		this.nom = nom;
 		this.pv = pv;
 		this.atk = atk;
-		this.type = type;
 	}
 
 	public String getNom() {
@@ -38,16 +36,6 @@ public class Pokemon {
 
 	public void attaquer(Pokemon autrePokemon) {
 		int degats = this.atk;
-		if ((this.type == TypePokemon.EAU && autrePokemon.type == TypePokemon.FEU)
-				&& (this.type == TypePokemon.PLANTE && autrePokemon.type == TypePokemon.EAU)
-				&& (this.type == TypePokemon.FEU && autrePokemon.type == TypePokemon.PLANTE)) {
-			degats /= 2;
-		}
-		if ((autrePokemon.type == TypePokemon.EAU && type == TypePokemon.FEU)
-				&& (autrePokemon.type == TypePokemon.PLANTE && type == TypePokemon.EAU)
-				&& (autrePokemon.type == TypePokemon.FEU && type == TypePokemon.PLANTE)) {
-			degats *= 2;
-		}
 		autrePokemon.infligerDegats(degats);
 	}
 

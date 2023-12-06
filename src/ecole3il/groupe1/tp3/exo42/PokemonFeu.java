@@ -13,4 +13,8 @@ public class PokemonFeu extends Pokemon {
 	public void attaquer(PokemonEau autrePokemon){
 		autrePokemon.infligerDegats((int) (getAtk() / 2));
 	}
+	
+	public void attaquer(PokemonFeu autrePokemon){
+		autrePokemon.infligerDegats((int) (getAtk() / 2));
+	}
 }

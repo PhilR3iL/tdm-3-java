@@ -10,6 +10,9 @@ public class PokemonPlante extends Pokemon {
 		autrePokemon.infligerDegats(getAtk() / 2);
 	}
 
+	public void attaquer(PokemonPlante autrePokemon) {
+		autrePokemon.infligerDegats(getAtk() / 2);
+	}
 	public void attaquer(PokemonEau autrePokemon) {
 		autrePokemon.infligerDegats(getAtk() * 2);
 	}
